@@ -1,0 +1,61 @@
+.about-area {
+  background: url(../img/background-img.jpg) center / cover no-repeat;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, #327cff, #054ED8);
+    opacity: .9;
+  }
+}
+
+.about-inner {
+  position: relative;
+  color: #fff;
+}
+
+
+.about-content {
+  text-align: center;
+
+  &__title {
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom: .2em;
+  }
+
+  &__name {
+    font-size: 2em;
+    margin-bottom: .5em;
+  }
+
+  &__work {
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 1em;
+  }
+
+  &__text {
+    line-height: 1.9em;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .about-inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-content {
+    max-width: 50%;
+    padding: 3em 0;
+    text-align: left;
+  }
+}

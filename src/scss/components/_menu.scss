@@ -1,0 +1,127 @@
+.main-header {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: .5rem 1rem;
+  transition: all .5s ease;
+  background: color(azul-base);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+.logo{
+  color: #fff;
+}
+.nav-toggle {
+  display: none;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle-label {
+  text-align: center;
+  font-size: 1.6rem;
+  color:#ffff;
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  //padding: 0.2em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 15%;
+}
+
+.main-nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: color(azul-base);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  padding: .5rem 1rem;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  &__link {
+    color: #ffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-int-out;
+  }
+
+  &__link:hover {
+    color: #fff;
+  }
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width:64em) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    transform: translate(0, 0);
+    width: auto;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .main-menu {
+    display: flex;
+  }
+
+  .main-menu__link {
+    opacity: 1;
+    position: relative;
+  }
+
+  .main-menu__link::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  .main-menu__link:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .main-menu__item {
+    margin-left: 2em;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,32 @@
+.button{
+  background: color(azul-base);
+
+  border-radius: 2rem ;
+  color: #fff;
+  display: inline-block;
+  line-height: 3em;
+  height: 3em;
+  padding: 0 1.5em;
+  width: 9rem;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.contact-button{
+  margin-top: 2em;
+  text-align: center;
+}
+.btn-cta{
+  background-color: color(gris-oscuro);
+  color: color(negro);
+}
+
+.all-contact{
+  text-align: center;
+  margin-top: 30px;
+}
+.section--padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}

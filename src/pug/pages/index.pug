@@ -1,0 +1,26 @@
+extends ../includes/layout.pug
+block metatags
+  -var title = 'FitnesGym'
+  -var description = ''
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+
+  block header
+    include ../blocks/menu
+  block banner
+    include ../blocks/banner
+  block about
+    include ../blocks/about
+  block service
+    include ../blocks/services
+  block cta
+    include ../blocks/cta
+  block gallery
+    include ../blocks/gallery
+  block pricePlans
+    include ../blocks/pricePlans
+  block contact
+    include ../blocks/contact
+  block footer
+    include ../blocks/footer

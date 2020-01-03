@@ -1,0 +1,26 @@
+// convertir px a em
+@function em($el,$parent:16px){
+  @return ($el / $parent) * 1em;
+}
+
+$font-size: em(14px);
+$h3-size: $font-size * 1.15;
+$h2-size: $font-size * 1.35;
+$h1-size: $font-size * 1.7;
+
+$colors: (
+  azul-base:#327cff,
+  azul-oscuro:#054ED8,
+  gris-claro:#65666a,
+  gris-oscuro:#F0F3FC,
+  gris:#A1A4A9,
+  negro:#171523
+);
+
+@function color($color){
+  @return map-get($colors,$color);
+};
+
+
+
+

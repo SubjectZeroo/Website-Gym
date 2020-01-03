@@ -1,0 +1,66 @@
+.pricePlans-section {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.pricing-table {
+  background: color(gris-oscuro);
+  margin: 1em;
+  text-align: center;
+}
+
+.card-header__title {
+  padding: 1em;
+}
+
+.card-review {
+  padding: 2em;
+  background: linear-gradient(190deg, color(azul-base), color(azul-oscuro));
+  color: #ffff;
+
+  &__price {
+
+    font-size: 2.5em;
+    margin-bottom: .5em;
+  }
+
+  &__price::before {
+    content: "$";
+  }
+
+  &__price::after {
+    content: ".00";
+  }
+}
+
+.card-list {
+  padding: 2em;
+
+  &__feature {
+    color: color(gris-claro);
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__feature {
+    padding: .3em;
+  }
+}
+
+.card-footer {
+  padding: 1em;
+  margin: auto auto 0;
+}
+
+@media screen and (min-width:768px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pricing-table {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+  }
+}
